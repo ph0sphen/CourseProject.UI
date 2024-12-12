@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    text-align: center;
+    overflow: hidden; 
+}
+ 
+ .form {
+    border: 1px black solid;
+    margin: 20px;
+} 
+
+input {
+    display: block;
+    margin: 10px auto;
+}
+
+.panel {
+    position: absolute; 
+    width: 250px;
+}
+
+.indicator {
+    position: absolute;
+    width: 400px;
+    
+}
+
+.indicator-value {
+    font-size: 24px;
+    margin: 5px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    background-color: rgb(116, 205, 119);
+    width: fit-content;
+}
+
+#backgroundArea{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+#backgroundArea img{
+   
+    max-width: 100%;
+        width: 80%;
+    height: 96vh;
+}
+
+ #hidden-form{
+    position: absolute;
+    top: 0;
+    width: 60px;
+    visibility: hidden;
+} 
+
+.forms{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+} 
+
+ .button-container{
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+} 
+
+.digram-button{
+    background-color: rgb(164, 64, 64);
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointed;
+}
+
+canvas{
+    position: relative;
+    z-index: 100;
+}
+
+#log{
+    position: absolute;
+    bottom: 40px;
+}
+
+#logTable{
+    
+    margin-top: -1rem;
+    padding: 20px;
+    z-index: 100;
+    position: relative;
+}
+
+.log-title{
+  text-align: left;
+  padding-left: 28px;
+    z-index: 100;
+    position: relative;
+    /* padding-top: 38rem; */
+    font-size: 20px;
+   }
+
+   #toolbar{
+    position: absolute;
+    bottom: 10px;
+
+    text-align: left;
+    padding-left: 190px;
+    margin-top: -1rem;
+    
+
+   }
+   .button{
+    display: inline-flex;
+    background: #0c477d;
+    color: #f1f1f1;
+    padding: 0.5rem 0.8rem;
+    margin: 0.8rem 0;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    font-size: 0.8rem;
+    border-radius: 7px;
+    transition: background-color 0.3s ease;
+   }
+
+   .button:hover{
+    background-color: #1960a3;
+   }

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualization</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+        <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="backgroundArea">
+        <img class="background-image" src="https://localhost:7045/api/BackgroundImage/12" alt="Image">
+        <div class="forms">
+            <form id="imageForm" enctype="multipart/form-data">
+                <input type="file" id="imageInput" accept="image/*" />
+                <button type="submit">Upload</button>
+            </form>
+            <form id="changeBg">
+                <input type="number" id="changeBgNumber">
+                <button type="submit">Change</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="panel">
+        <form class="form" id="create-indicator-form">
+            <input id="name" type="text" placeholder="Name">
+            <input id="base_value" type="text" placeholder="Base value">
+            <input id="unit" type="text" placeholder="Unit">
+            <input id="x" type="number" placeholder="X">
+            <input id="y" type="number" placeholder="Y">
+            <button type="submit" value="Create" id="create-indicator-form">Create</button>
+        </form>
+    </div>
+
+    <div id="hidden-form">
+        <form id="update-indicator-form">
+            <input id="id" type="hidden" />
+        </form>
+    </div>
+
+    <!-- <div class="chart-container" style="display: none;">
+        <canvas id="trendChart"></canvas>
+        <canvas id="histogramChart"></canvas>
+    </div> -->
+
+    <div id="log">
+        <h2 class="log-title">Журнал аварійних ситуацій</h2>
+        <table id="logTable">
+            <thead>
+                <tr>
+                    <th>Time and Date</th>
+                    <th>Event Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2024-12-12 18:00</td>
+                    <td>Event Description</td>
+                    <td>Safety System is On</td>
+                </tr>
+               
+            </thead>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="toolbar">
+        <button id ="crR"  class="button" >Create Report</button>
+        <button id = "exDa" class="button" >Export Data</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.0/signalr.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="scripts.js"></script>
+    <script>
+        
